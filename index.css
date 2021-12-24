@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body{
+  margin: 0;
+  color: #141414;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2{
+  font-size: 32px;
+}
+
+hr{
+  height: 2px;
+  background-color: #3b3b3b;
+  border-radius: 50px;
+  border-color: #3b3b3b;
+}
+
+a{
+  color: #7e7e7e;
+  text-decoration: none;
+  transition: color 0.2s ease-in,
+  text-shadow 0.2s ease-in ;
+}
+
+a:hover{
+  color: #3b3b3b;
+  text-shadow: 3px 6px 20px #3b3b3b;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+  border: 2px solid #949494;
+}
+
+table td{
+  border-top: 1px solid #b1b1b1;
+}
+
+.user_photo{
+  width: 200px;
+  border-radius: 30%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.user_info{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 2%;
+}
+
+.user_info_content{
+  margin-left: 5%;
+}
+
+.user_info_content p {
+  color: #7e7e7e;
+  margin: 0;
+  font-style: italic;
+}
+
+.user_info_content h2{
+  text-transform: uppercase;
+}
+
+.content{
+  max-width: 1140px;
+  padding: 20px 30px;
+  margin: 0 auto;
+}
+
+.card{
+  border: 2px solid #d6d6d6;
+  border-radius: 30px;
+  margin: 16px 0;
+  padding: 10px;
+}
+
+.card-title{
+  border-bottom: 1px #3a3a3a solid;
+  border-width: 50%;
+}
+
+.card-content ol{
+  padding: 0 15px;
+}
+
+.card-content li{
+  margin-bottom: 10px;
+}
+
+.card-content td{
+  width: 25%;
+  padding: 10px 0;
+}
+
+.gradient-grey-white{
+  background: linear-gradient(250deg, #fff, #d6d6d6);
+}
+
+.gradient-darkGrey-white{
+  background: linear-gradient(50deg, #fff, #cfcbcb);
+}
+
+.form-item{
+  margin: 0 auto;
+}
+
+.form-item input,
+.form-item textarea{
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 0px 5px 5px 5px;
+  font-family: inherit;
+  background: transparent;
+  margin-bottom: 15px;
+}
+
+.form-item textarea{
+  resize: none;
+}
+
+.btn{
+  margin: 15px 0;
+  background: transparent;
+  border: none;
+}
+
+.btn-submit{
+  border: 1px solid #000;
+  border-radius: 25px;
+  padding: 10px;
+  transition: background-color 0.4s ease-out;
+}
+
+.btn-submit:hover{
+  background-color: rgba(65, 65, 65, 0.5);
+}
