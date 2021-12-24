@@ -143,3 +143,22 @@ table td{
 .btn-submit:hover{
   background-color: rgba(65, 65, 65, 0.5);
 }
+
+
+@media (max-width: 650px){
+  body{
+    font-size: 12px;
+  }
+
+  .user_info{
+    flex-wrap: wrap;
+  }
+
+  .user_info_content p{
+    font-size: 16px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+}
