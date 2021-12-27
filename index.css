@@ -80,13 +80,8 @@ table td{
   padding: 10px;
 }
 
-.card-title{
-  border-bottom: 1px #3a3a3a solid;
-  border-width: 50%;
-}
-
 .card-content ol{
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 .card-content li{
@@ -96,6 +91,10 @@ table td{
 .card-content td{
   width: 25%;
   padding: 10px 0;
+}
+
+.card-content, .card-title{
+  padding: 5px;
 }
 
 .gradient-grey-white{
@@ -121,6 +120,7 @@ table td{
   font-family: inherit;
   background: transparent;
   margin-bottom: 15px;
+  font-size: inherit;
 }
 
 .form-item textarea{
@@ -137,11 +137,40 @@ table td{
   border: 1px solid #000;
   border-radius: 25px;
   padding: 10px;
-  transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out,
+  color 0.4s ease-out;
+  font-size: inherit;
+  font-family: inherit;
+  color:#000
 }
 
 .btn-submit:hover{
-  background-color: rgba(65, 65, 65, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.btn-submit:active{
+  background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 1) )
+}
+
+.card-open{
+  height: 100%;
+  opacity: 100%;
+  transition: all .3s ease-in;
+}
+
+.card-close{
+  height: 0;
+  opacity: 0%;
+  transition: all .3s ease-out;
+}
+
+.card-title h2{
+  cursor: pointer;
+}
+
+.none{
+  display: none;
 }
 
 
