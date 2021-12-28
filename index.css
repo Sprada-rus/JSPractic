@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+html{
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 body{
   margin: 0;
   color: #141414;
@@ -57,7 +62,7 @@ table td{
   margin-left: 5%;
 }
 
-.user_info_content p {
+.user_info_content p{
   color: #7e7e7e;
   margin: 0;
   font-style: italic;
@@ -107,6 +112,17 @@ table td{
 
 .form-item{
   margin: 0 auto;
+}
+
+input[type="text"], input[type="email"],
+input[type="tel"], input[type="number"],
+textarea{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .form-item input,
@@ -174,20 +190,72 @@ table td{
 }
 
 
-@media (max-width: 650px){
+@media (min-width:400px) and (max-width:1024px) {
+  
+}
+
+@media (min-width:421px) and (max-width:800px){
+  .user_info{
+    flex-wrap: wrap;
+  }
+  .user_photo{
+    margin: 0 auto;
+  }
+  
+  .user_info_content p{
+    font-size: 2rem;
+  }
+
   body{
-    font-size: 12px;
+    font-size: 1.5rem;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  h2{
+    font-size: 2.5rem;
+  }
+
+  .user_info_content{
+    margin-left: 0;
+  }
+
+  .card td,
+  .card th{
+    font-size: 1rem;
+  }
+
+
+}
+
+@media (max-width: 420px){
+  body{
+    font-size: 1rem;
   }
 
   .user_info{
     flex-wrap: wrap;
   }
 
+  .user_photo{
+    margin: 0 auto;
+  }
+
+  .user_info_content{
+    margin-left: 0;
+  }
+
   .user_info_content p{
-    font-size: 16px;
+    font-size: 1.5rem;
+  }
+
+  h1{
+    font-size: 2rem;
   }
 
   h2{
-    font-size: 30px;
+    font-size: 1.7rem;
   }
 }

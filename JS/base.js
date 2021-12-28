@@ -20,7 +20,6 @@ const openCard = (event) => {
         divContent.classList.add('none')
       }, 350)
     }
-    // divContent.style.display =  ? 'block' : 'none'
   }
 }
 
