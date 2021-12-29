@@ -66,14 +66,14 @@
     <hr>
 
     <h2>Проверка связи</h2>
-    <form action="/">
+    <form onsubmit="checkFields()" id="form-callback">
         <div class="form-item">
             <label for="client_name">Ваше имя:</label>
-            <input type="text" id="client_name" placeholder="Иван Иванов">
+            <input type="text" id="client_name" placeholder="Иван Иванов" required>
         </div>
         <div class="form-item">
             <label for="client_email">Ваш email:</label>
-            <input type="text" id="client_email" placeholder="info@info.ru">
+            <input type="text" id="client_email" placeholder="info@info.ru" required>
         </div>
         <div class="form-item">
             <label for="client_massage">Ваше сообщение:</label><br>
@@ -90,7 +90,8 @@
 <script src="JS/proxy.js"></script>
 <script src="JS/request.js"></script>
 <script src="JS/fetch.js"></script> -->
-<script src="JS/spread.js"></script>
+<!-- <script src="JS/spread.js"></script> -->
 <script src="JS/base.js"></script>
+<script src="JS/requiredFields.js"></script>
 </body>
 </html>

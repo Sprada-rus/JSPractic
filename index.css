@@ -189,6 +189,10 @@ textarea{
   display: none;
 }
 
+.required-list{
+  color: rgb(179, 0, 0)
+}
+
 
 @media (min-width:400px) and (max-width:1024px) {
   
