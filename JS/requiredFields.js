@@ -1,7 +1,7 @@
 const form = document.querySelector('#form-callback')
 let formChildren = form.children
-const requiredFields = []
-console.log(form)
+const requiredFields = new Set([])
+// console.log(form)
 
 
 const editLabelRequiredFields = () => {
@@ -9,17 +9,17 @@ const editLabelRequiredFields = () => {
     let checkNode = formChildren[i].lastElementChild
     // let labelNode = formChildren[i].firstElementChildd
     if(checkNode?.required){
-      requiredFields.push(checkNode)
+      requiredFields.add(checkNode)
       checkNode.labels[0].outerHTML += " <span style='color:red;'>*</span>"
     }    
   }
 
-  if(requiredFields.length > 0){
+  if(requiredFields.size){
     const reqList = form.appendChild(document.createElement('div'))
     reqList.textContent = "Необходимо заполнить поля: "
     reqList.classList.add('required-list')
 
-    let labels = requiredFields.map(i => {
+    let labels = Array.from(requiredFields).map(i => {
       return i.labels[0].innerText.slice(0, i.labels[0].innerText.indexOf(':'))
     })
     
@@ -28,8 +28,24 @@ const editLabelRequiredFields = () => {
   
 }
 
-
 form.onloadeddata = editLabelRequiredFields()
+form.onchange = (event) => {
+  const changedNode = event.target
+  const countSymbols = changedNode.value.length
+  const reqList = document.querySelector('.required-list')
 
+  if(countSymbols && requiredFields.has(changedNode)){
+    requiredFields.delete(changedNode)
+  } else if(!countSymbols && changedNode?.required){
+    requiredFields.add(changedNode)
+  }
 
+  if(requiredFields.size){
+    reqList.textContent = "Необходимо заполнить поля: " + Array.from(requiredFields).map(i => {
+      return i.labels[0].innerText.slice(0, i.labels[0].innerText.indexOf(':'))
+    }).join(', ')
 
+  }
+
+  reqList.style.display = requiredFields.size === 0 ? 'none' : 'block'
+}
