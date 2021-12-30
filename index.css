@@ -219,9 +219,9 @@ textarea{
   border-radius: 30px;
   width: 50%;
   margin: 0 auto;
-  opacity: 1;
+  opacity: 0;
   transform: translateY(-400px);
-  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, opacity .3s ease-out;
 }
 
 .modal-header{
@@ -290,6 +290,10 @@ textarea{
     font-size: 1rem;
   }
 
+  .modal{
+    width: 90%;
+    transform: translateY(-1000);
+  }
 
 }
 
@@ -320,5 +324,10 @@ textarea{
 
   h2{
     font-size: 1.7rem;
+  }
+
+  .modal{
+    width: 90%;
+    transform: translateY(-1000);
   }
 }
