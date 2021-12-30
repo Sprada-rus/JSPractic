@@ -56,7 +56,7 @@ const submitForm = (event) => {
 
   let contentText = `<p><b>Многоуважаемый(-ая) ${inputs[0].value}</b></p>`
   contentText +=  `<p>Вы зря смотрели и писали значения в форму. На ваш email ${inputs[1].value} никогда не придет ответ</p>`
-  contentText += '<p>' + inputs[2].value != '' ? `Ваше сообщение '${inputs[2].value}' никогда не будет доставлено.` : '' + '</p>'
+  contentText += '<p>' + (inputs[2].value != '' ? `Ваше сообщение '${inputs[2].value}' никогда не будет доставлено.` : '') + '</p>'
   contentText += '<p>C наилучшими пожеланиями,<br>Создатель резюме!</p>'
 
   const modalObject = {
