@@ -3,23 +3,49 @@ const openCard = (event) => {
   const OPEN = 'card-open'
   const idDivContent = event.target?.dataset?.content
   const divContent = document.querySelector(`#${idDivContent}`)
-  
+
+  console.log(divContent)
+
   if (divContent){
-    const contentClass = divContent.classList
-    
-    if(divContent.classList.contains(CLOSE)){
-      divContent.classList.remove(CLOSE)
-      divContent.classList.add(OPEN)
-      setTimeout(() => {
-        divContent.classList.remove('none')
-      }, 100)
+    let countAnim = 0 
+
+    if(divContent.classList.toggle(OPEN)){
+      divContent.style.height = 0
+      divContent.style.opacity = 0
+      
+      let anim = setInterval(() => {
+        if(divContent.style.height == '100%'){
+          divContent.style.removeProperty('height');
+          divContent.style.removeProperty('opacity');
+          clearInterval(anim)
+          return;
+        }
+        
+        countAnim += 10
+        divContent.style.height = countAnim+'%'
+        divContent.style.opacity = countAnim+'%'
+        console.log(divContent.style.height)
+      }, 20);
+
+      delete divContent.style
     } else {
-      divContent.classList.remove(OPEN)
-      divContent.classList.add(CLOSE)
-      setTimeout(() => {
-        divContent.classList.add('none')
-      }, 350)
-    }
+      countAnim = 100
+      divContent.style.display = 'block'
+      let anim = setInterval(() => {
+        if(divContent.style.height == '0%'){
+          divContent.style.removeProperty('height');
+          divContent.style.removeProperty('opacity');
+          divContent.style.removeProperty('display');
+          clearInterval(anim)
+          return;
+        }
+        
+        countAnim -= 10
+        divContent.style.height = countAnim+'%'
+        divContent.style.opacity = countAnim+'%'
+        console.log(divContent.style.height)
+      }, 20);
+    } 
   }
 }
 
