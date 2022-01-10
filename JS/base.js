@@ -26,8 +26,6 @@ const openCard = (event) => {
         divContent.style.opacity = countAnim+'%'
         console.log(divContent.style.height)
       }, 20);
-
-      delete divContent.style
     } else {
       countAnim = 100
       divContent.style.display = 'block'
