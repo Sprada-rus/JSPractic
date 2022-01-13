@@ -67,15 +67,15 @@
         <form id="form-callback" >
             <div class="form-item">
                 <label for="client_name">Ваше имя:</label>
-                <input type="text" id="client_name" placeholder="Иван Иванов" required>
+                <input type="text" id="client_name" placeholder="Иван Иванов" required autocomplete="name">
             </div>
             <div class="form-item">
                 <label for="client_email">Ваш email:</label>
-                <input type="text" id="client_email" placeholder="info@info.ru" required>
+                <input type="email" id="client_email" placeholder="info@info.ru" required>
             </div>
             <div class="form-item">
                 <label for="client_massage">Ваше сообщение:</label><br>
-                <textarea name="Сообщение" id="client_massage" cols="32" rows="5" placeholder="Сообщение"></textarea>
+                <textarea name="Сообщение" id="client_massage" cols="32" rows="5" placeholder="Сообщение" required></textarea>
             </div>
             <input class="btn btn-submit" type="submit" value="Отправить запрос">
         </form>
